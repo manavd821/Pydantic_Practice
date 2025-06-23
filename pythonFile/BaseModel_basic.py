@@ -4,7 +4,7 @@ class Product(BaseModel):
     id : int
     name : str
     price : float
-    in_stock : bool
+    in_stock : bool = False
 
 
 def main():
