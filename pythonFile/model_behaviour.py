@@ -3,7 +3,7 @@ from pydantic import BaseModel, field_validator, model_validator, computed_field
 class User(BaseModel):
     username : str
 
-    @field_validator(field = 'username')
+    @field_validator('username')
     def username_length(cls, value):
         if len(value) < 3:
             raise ValueError('Username must be atleast four characters')
